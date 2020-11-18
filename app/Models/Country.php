@@ -1,16 +1,16 @@
 <?php
 
-namespace App;
+namespace App\Models;
 
+use DateTimeInterface;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
-use \DateTimeInterface;
 
-class City extends Model
+class Country extends Model
 {
     use SoftDeletes;
 
-    public $table = 'cities';
+    public $table = 'countries';
 
     protected $dates = [
         'created_at',
@@ -20,7 +20,7 @@ class City extends Model
 
     protected $fillable = [
         'name',
-        'country_id',
+        'short_code',
         'created_at',
         'updated_at',
         'deleted_at',
@@ -29,10 +29,5 @@ class City extends Model
     protected function serializeDate(DateTimeInterface $date)
     {
         return $date->format('Y-m-d H:i:s');
-    }
-
-    public function country()
-    {
-        return $this->belongsTo(Country::class, 'country_id');
     }
 }

@@ -2,11 +2,11 @@
 
 namespace App\Http\Controllers\Api\V1\Admin;
 
-use App\City;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\StoreCityRequest;
 use App\Http\Requests\UpdateCityRequest;
 use App\Http\Resources\Admin\CityResource;
+use App\Models\City;
 use Gate;
 use Illuminate\Http\Request;
 use Symfony\Component\HttpFoundation\Response;

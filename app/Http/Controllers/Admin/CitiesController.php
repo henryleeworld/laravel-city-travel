@@ -2,12 +2,12 @@
 
 namespace App\Http\Controllers\Admin;
 
-use App\City;
-use App\Country;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\MassDestroyCityRequest;
 use App\Http\Requests\StoreCityRequest;
 use App\Http\Requests\UpdateCityRequest;
+use App\Models\City;
+use App\Models\Country;
 use Gate;
 use Illuminate\Http\Request;
 use Symfony\Component\HttpFoundation\Response;

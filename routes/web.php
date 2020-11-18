@@ -28,7 +28,7 @@ Auth::routes(['register' => false]);
 Route::group([
     'prefix' => 'user',
     'as' => 'user.',
-    'namespace' => 'User',
+    'namespace' => 'App\Http\Controllers\User',
     'middleware' => ['auth']
 ], function () {
     Route::get('/', 'HomeController@index')->name('home');
@@ -37,7 +37,7 @@ Route::group([
 Route::group([
     'prefix' => 'admin',
     'as' => 'admin.',
-    'namespace' => 'Admin',
+    'namespace' => 'App\Http\Controllers\Admin',
     'middleware' => ['auth', 'admin']
 ], function () {
     Route::get('/', 'HomeController@index')->name('home');
@@ -65,7 +65,7 @@ Route::group([
     Route::delete('trips/destroy', 'TripsController@massDestroy')->name('trips.massDestroy');
     Route::resource('trips', 'TripsController');
 });
-Route::group(['prefix' => 'profile', 'as' => 'profile.', 'namespace' => 'Auth', 'middleware' => ['auth']], function () {
+Route::group(['prefix' => 'profile', 'as' => 'profile.', 'namespace' => 'App\Http\Controllers\Auth', 'middleware' => ['auth']], function () {
 // Change password
     if (file_exists(app_path('Http/Controllers/Auth/ChangePasswordController.php'))) {
         Route::get('password', 'ChangePasswordController@edit')->name('password.edit');

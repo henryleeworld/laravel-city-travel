@@ -2,12 +2,12 @@
 
 namespace App\Http\Controllers\Admin;
 
-use App\City;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\MassDestroyTripRequest;
 use App\Http\Requests\StoreTripRequest;
 use App\Http\Requests\UpdateTripRequest;
-use App\Trip;
+use App\Models\City;
+use App\Models\Trip;
 use Gate;
 use Illuminate\Http\Request;
 use Symfony\Component\HttpFoundation\Response;

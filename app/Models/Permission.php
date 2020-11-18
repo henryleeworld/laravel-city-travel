@@ -1,16 +1,16 @@
 <?php
 
-namespace App;
+namespace App\Models;
 
+use DateTimeInterface;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
-use \DateTimeInterface;
 
-class Country extends Model
+class Permission extends Model
 {
     use SoftDeletes;
 
-    public $table = 'countries';
+    public $table = 'permissions';
 
     protected $dates = [
         'created_at',
@@ -19,8 +19,7 @@ class Country extends Model
     ];
 
     protected $fillable = [
-        'name',
-        'short_code',
+        'title',
         'created_at',
         'updated_at',
         'deleted_at',

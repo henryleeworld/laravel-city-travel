@@ -2,7 +2,7 @@
 
 namespace App\Http\Requests;
 
-use App\Trip;
+use App\Models\Trip;
 use Gate;
 use Illuminate\Foundation\Http\FormRequest;
 use Symfony\Component\HttpFoundation\Response;
