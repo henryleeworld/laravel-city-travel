@@ -5,7 +5,7 @@
         <div class="col-md-8">
             <div class="card">
                 <div class="card-header">
-                    Dashboard
+                    {{ __('Dashboard') }}
                 </div>
 
                 <div class="card-body">
@@ -15,7 +15,7 @@
                         </div>
                     @endif
 
-                    You are logged in!
+                    {{ __('You are logged in!') }}
                 </div>
             </div>
         </div>
